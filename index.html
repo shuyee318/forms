@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Forms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #0c35c6;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background: #0c35c6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0941a8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Donation Form</h1>
+    <form action="/submit_donation_form" method="POST">
+        <label for="donor_name">Full Name:</label>
+        <input type="text" id="donor_name" name="donor_name" placeholder="Your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+        <label for="amount">Donation Amount (RM):</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter donation amount" required>
+
+        <label for="message">Message (optional):</label>
+        <textarea id="message" name="message" rows="4" placeholder="Leave a message..."></textarea>
+
+        <button type="submit">Donate Now</button>
+    </form>
+</div>
+
+
+<div class="container">
+    <h1>Charity Volunteer Form</h1>
+    <form action="/submit_volunteer_form" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+        <label for="interest">Area of Interest:</label>
+        <select id="interest" name="interest" required>
+            <option value="education">Education</option>
+            <option value="medical">Medical Aid</option>
+            <option value="community">Community Development</option>
+            <option value="environment">Environment</option>
+        </select>
+
+        <label for="availability">Availability (e.g., weekdays, weekends):</label>
+        <input type="text" id="availability" name="availability" placeholder="Your availability" required>
+
+        <label for="message">Additional Comments:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any additional information..."></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <h1>Request for Assistance Form</h1>
+    <form action="/submit_assistance_form" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+        <label for="category">Category of Assistance:</label>
+        <select id="category" name="category" required>
+            <option value="medical">Medical Aid</option>
+            <option value="education">Education</option>
+            <option value="financial">Financial Support</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="description">Describe Your Need:</label>
+        <textarea id="description" name="description" rows="4" placeholder="Please provide details..." required></textarea>
+
+        <label for="docs">Supporting Documents (if any):</label>
+        <input type="file" id="docs" name="docs" accept=".pdf,.jpg,.png">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
